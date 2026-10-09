@@ -125,10 +125,18 @@ test('responsive breakpoints have no horizontal overflow and use the correct fra
   }
 });
 
-test('reduced motion suppresses the decorative scroll transform', async ({ page }) => {
+test('motion preference changes preserve decoration positions while suppressing spinning', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
-  await page.evaluate(() => window.scrollTo(0, 500));
-  await expect(page.locator('.flower-right img')).toHaveCSS('transform', 'none');
+  await page.evaluate(() => window.scrollTo({ top: 500, behavior: 'instant' }));
+  const translations = () => page.locator('.flower img').evaluateAll((images) => images.map((image) => {
+    const matrix = new DOMMatrix(getComputedStyle(image).transform);
+    return { y: matrix.f, spin: matrix.b };
+  }));
+  await expect.poll(async () => (await translations()).every(({ y, spin }) => Math.abs(y - 250) < 1 && Math.abs(spin) < 0.001)).toBe(true);
+  await page.emulateMedia({ reducedMotion: 'no-preference' });
+  await expect.poll(async () => (await translations()).every(({ y, spin }) => Math.abs(y - 250) < 1 && Math.abs(spin) > 0.5)).toBe(true);
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await expect.poll(async () => (await translations()).every(({ y, spin }) => Math.abs(y - 250) < 1 && Math.abs(spin) < 0.001)).toBe(true);
 });
 
 test('membership form validates locally without submitting credentials', async ({ page }) => {

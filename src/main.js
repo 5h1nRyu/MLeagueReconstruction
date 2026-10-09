@@ -218,7 +218,8 @@ function updateParallax() {
   parallaxPending = false;
   const y = window.scrollY;
   const mobile = mobileQuery.matches;
-  const translate = reducedMotion.matches ? 0 : y / (mobile ? 10 : 2);
+  // Keep the scroll-linked position even when optional spinning is reduced.
+  const translate = y / (mobile ? 10 : 2);
   const rotate = reducedMotion.matches ? 0 : y / (mobile ? 15 : 10);
   $('.flower-right img').style.transform = `translateY(${translate}px) rotate(${rotate}deg)`;
   $('.flower-left img').style.transform = `translateY(${translate}px) rotate(${-rotate}deg)`;
