@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="624" height="428" viewBox="0 0 624 428">
+  <defs><pattern id="p" width="42" height="42" patternUnits="userSpaceOnUse"><path d="m21 1 19 10v21L21 42 2 32V11Zm0 9L10 17v11l11 6 11-6V17Z" fill="none" stroke="#e5eae4" stroke-width="3"/></pattern><filter id="s"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity=".12"/></filter></defs>
+  <rect width="624" height="428" fill="#f5f6f0"/><rect width="624" height="428" fill="url(#p)"/>
+  <text x="312" y="69" text-anchor="middle" fill="#171b17" font-family="Arial,sans-serif" font-size="30" font-weight="900" letter-spacing="7">PAI.LEAGUE</text>
+  <text x="312" y="121" text-anchor="middle" fill="#171b17" font-family="Arial,sans-serif" font-size="49" font-weight="900" letter-spacing="1">AUTUMN TABLE</text>
+  <rect x="53" y="147" width="518" height="32" rx="16" fill="#118745"/><text x="312" y="170" text-anchor="middle" fill="white" font-family="sans-serif" font-size="18" font-weight="700" letter-spacing="4">秋日牌局 · 城市交流会</text>
+  <g filter="url(#s)"><rect x="106" y="213" width="89" height="132" rx="14" fill="white" transform="rotate(-11 150 278)"/><rect x="199" y="206" width="89" height="132" rx="14" fill="white" transform="rotate(-4 244 272)"/><rect x="297" y="206" width="89" height="132" rx="14" fill="white" transform="rotate(4 342 272)"/><rect x="395" y="213" width="89" height="132" rx="14" fill="white" transform="rotate(11 440 278)"/></g>
+  <g fill="#118745" font-family="serif" font-size="55" font-weight="700" text-anchor="middle"><text x="151" y="295" transform="rotate(-11 150 278)">东</text><text x="245" y="286" transform="rotate(-4 244 272)">南</text><text x="341" y="286" transform="rotate(4 342 272)">西</text></g><text x="439" y="295" text-anchor="middle" fill="#c1292e" font-family="serif" font-size="55" font-weight="700" transform="rotate(11 440 278)">北</text>
+  <text x="312" y="385" text-anchor="middle" fill="#395740" font-family="Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="3">FOUR CITIES · ONE SHARED PASSION</text>
+</svg>
