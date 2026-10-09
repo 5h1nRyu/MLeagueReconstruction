@@ -49,12 +49,12 @@ button, a, input { -webkit-tap-highlight-color: transparent; }
 .button.primary:hover::before { transform: scale(0); opacity: 0; }
 .button.more { min-height: 45px; border-width: 1px; color: var(--green); background: #fff; }
 .button.more::before { display: none; }
-.button.more::after { content: ""; position: absolute; right: 20px; top: 50%; width: 18px; height: 10px; background: url('/assets/decor/ico-more.png') center/contain no-repeat; transform: translateY(-50%) rotate(180deg); transition: transform .2s; }
+.button.more::after { content: ""; position: absolute; right: 20px; top: 50%; width: 18px; height: 10px; background: url('../assets/decor/ico-more.png') center/contain no-repeat; transform: translateY(-50%) rotate(180deg); transition: transform .2s; }
 .button.more[aria-expanded="true"]::after { transform: translateY(-50%); }
 .button.more:hover { background: #f0f7f1; }
 .section-action { margin-top: 40px; text-align: center; }
 
-.opponents { background: #ededed url('/assets/decor/bg-pattern_pc.png') repeat; }
+.opponents { background: #ededed url('../assets/decor/bg-pattern_pc.png') repeat; }
 .opponents-inner { position: relative; padding: 10px 0 40px; }
 .match-heading { display: flex; align-items: baseline; gap: 20px; width: 960px; max-width: calc(100% - 80px); margin: auto; padding-bottom: 10px; }
 .match-heading h1 { display: flex; align-items: baseline; font-family: Arial, sans-serif; font-size: 42px; line-height: 1.7; font-weight: 700; }
@@ -274,7 +274,7 @@ dialog:modal { z-index: 100; }
   .button.more { width: 200px; min-height: 38px; font-size: 15px; }
   .button.more::after { width: 14px; right: 17px; }
   .section-action { margin-top: 35px; }
-  .opponents { background-image: url('/assets/decor/bg-pattern_sp.png'); }
+  .opponents { background-image: url('../assets/decor/bg-pattern_sp.png'); }
   .opponents-inner { padding: 6px 0 25px; }
   .match-heading { width: 286px; max-width: 100%; gap: 12px; padding-bottom: 20px; }
   .match-heading h1 { font-size: 35px; }

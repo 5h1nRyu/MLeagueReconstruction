@@ -20,7 +20,9 @@ npm run build
 npm run preview
 ```
 
-构建产物位于 `dist/`，可交给静态文件服务。Vite 使用相对资源路径，支持根路径和子目录部署。本仓库没有自动发布配置。
+构建产物位于 `dist/`，可交给静态文件服务。Vite 使用相对资源路径，支持根路径和子目录部署。
+
+GitHub Pages 支持直接从 `main` 分支的 `/ (root)` 发布，无需先运行 Vite。图片使用 HTML、CSS 或模块所在位置的相对路径，避免项目站点下的资源误请求到域名根目录；脚本也不依赖仅在 Vite 构建时提供的环境变量。若使用构建流程发布，则发布 `dist/` 的内容即可。本仓库没有自定义自动发布工作流。
 
 ## 首页交互
 
@@ -41,7 +43,7 @@ npx playwright install chromium
 npm test
 ```
 
-`npm test` 先构建，再针对生产预览运行浏览器测试，覆盖完整页面、轮播、排行榜、导航、弹窗、内容展开、320–1440px 响应式、减少动态效果以及表单不提交凭据。
+`npm test` 先构建，再针对生产预览运行浏览器测试，覆盖完整页面、轮播、排行榜、导航、弹窗、内容展开、320–1440px 响应式、减少动态效果以及表单不提交凭据。另外，在 `/MLeagueReconstruction/` 子目录下分别检查直接发布源码与构建产物的桌面、手机页面，验证图片和 CSS 背景成功加载、新闻完整生成，并检查脚本错误与资源 404。
 
 已有系统 Chromium 时可指定路径，例如：
 
@@ -53,8 +55,8 @@ PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm test
 
 - [实现说明](docs/design-notes.md)
 - [装饰素材来源及校验值](docs/asset-sources.json)
-- `public/assets/decor/`：原站装饰文件。
-- `public/assets/news-*.svg`：本项目创建的示例新闻插画。
+- `assets/decor/`：原站装饰文件。
+- `assets/news-*.svg`：本项目创建的示例新闻插画。
 - `src/main.js`：示例数据、独立队伍图形、人物插画与交互。
 - `src/styles.css`：版式、响应式及动态效果。
 

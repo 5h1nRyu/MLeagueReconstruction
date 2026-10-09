@@ -2,31 +2,31 @@
   "captured_date": "2026-10-09",
   "assets": [
     {
-      "file": "public/assets/decor/bg-pattern_pc.png",
+      "file": "assets/decor/bg-pattern_pc.png",
       "source_url": "https://m-league.jp/assets/media/img/common/bg-pattern_pc.png",
       "bytes": 2116,
       "sha256": "2d61d96bd1a6d51f465766fc92b7f6bede69dab02b6cbe3a2a3ea65e0d1af01d"
     },
     {
-      "file": "public/assets/decor/bg-pattern_sp.png",
+      "file": "assets/decor/bg-pattern_sp.png",
       "source_url": "https://m-league.jp/assets/media/img/common/bg-pattern_sp.png",
       "bytes": 2304,
       "sha256": "b46a784c50a930a37de758150b1d0ef164092e657f13417edba6a5c58c63fb79"
     },
     {
-      "file": "public/assets/decor/ico-more.png",
+      "file": "assets/decor/ico-more.png",
       "source_url": "https://m-league.jp/assets/media/img/top/ico-more.png",
       "bytes": 228,
       "sha256": "0bed54559c7cca0dc27a7cf3b4105d5eddceef6e7532d09b2018b3fa67a04242"
     },
     {
-      "file": "public/assets/decor/img-bird.svg",
+      "file": "assets/decor/img-bird.svg",
       "source_url": "https://m-league.jp/assets/media/img/common/img-bird.svg",
       "bytes": 8150,
       "sha256": "02aa30ccdd763f48c45044cd1eee0b2453e494f5c90a8d36c94d48dbfa4eae47"
     },
     {
-      "file": "public/assets/decor/img-flower.svg",
+      "file": "assets/decor/img-flower.svg",
       "source_url": "https://m-league.jp/assets/media/img/top/img-flower.svg",
       "bytes": 14453,
       "sha256": "38e65b9c03b03313e879866a0da6cda8f3533777216371589221feecf1a59382"

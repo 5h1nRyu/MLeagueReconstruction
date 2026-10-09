@@ -1,4 +1,10 @@
-const asset = (name) => `${import.meta.env.BASE_URL}assets/${name}`;
+// Literal module-relative URLs work both on branch-based Pages and in Vite builds.
+const newsAssets = {
+  'news-autumn.svg': new URL('../assets/news-autumn.svg', import.meta.url).href,
+  'news-season.svg': new URL('../assets/news-season.svg', import.meta.url).href,
+  'news-focus.svg': new URL('../assets/news-focus.svg', import.meta.url).href,
+};
+const asset = (name) => newsAssets[name];
 const teams = [
   { name: '樱庭会', english: 'SAKURA', symbol: '樱', color: '#6e455c', accent: '#ef9bb1', points: 382.4, diff: '—', games: 20 },
   { name: '青山麻雀社', english: 'AOYAMA', symbol: '青', color: '#1e4c3d', accent: '#82aa86', points: 224.8, diff: 157.6, games: 20 },

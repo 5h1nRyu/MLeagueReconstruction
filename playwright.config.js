@@ -14,9 +14,17 @@ export default defineConfig({
     screenshot: 'only-on-failure',
     trace: 'retain-on-failure',
   },
-  webServer: {
+  webServer: [{
     command: 'npm run preview -- --host 127.0.0.1 --port 4173 --strictPort',
     url: 'http://127.0.0.1:4173',
     reuseExistingServer: false,
-  },
+  }, {
+    command: 'node scripts/serve-test-site.mjs --directory . --port 4174',
+    url: 'http://127.0.0.1:4174/MLeagueReconstruction/',
+    reuseExistingServer: false,
+  }, {
+    command: 'node scripts/serve-test-site.mjs --directory dist --port 4175',
+    url: 'http://127.0.0.1:4175/MLeagueReconstruction/',
+    reuseExistingServer: false,
+  }],
 });
